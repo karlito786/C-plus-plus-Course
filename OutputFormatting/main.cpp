@@ -272,9 +272,49 @@ int main(){
   std::cout << "c : " << c << std::endl;
 
 
-  //======================================================================
+  //====================================================================================
 
   std::cout << std::endl;
+
+  // setprecision() : the number of digits printed out for a floating point.
+
+  a = 3.1415926535897932384626433832795;
+
+  std::cout << std::endl;
+  std::cout << "a (default precision(6)) : " << a << std::endl;
+  std::cout << std::setprecision(10);
+  std::cout << "a (precision(10)) : " << a << std::endl;
+  std::cout << std::setprecision(20);
+  std::cout << "a (precision(20)) : " << a << std::endl;
+
+  // If the precision is bigger than supported by the type , you'll just print garbage 
+
+  //=====================================================================================
+  std::cout << std::endl;
+
+
+  // showpoint and noshowpoint : show trailling zeros if necessary
+  // force output of decimal point
+
+  double d {34.1};
+  double e {101.99};
+  double f {12.0};
+  int    g {45};
+
+  std::cout << std::endl;
+  std::cout << "noshowpoint (default) : " << std::endl;
+  std::cout << "d : " << d << std::endl;
+  std::cout << "e : " << e << std::endl;
+  std::cout << "f : " << f << std::endl; // 12
+  std::cout << "g : " << g << std::endl;
+
+  std::cout << std::endl;
+  std::cout << "showpoint : " << std::endl;
+  std::cout << std::showpoint;
+  std::cout << "d : " << d << std::endl;
+  std::cout << "e : " << e << std::endl;
+  std::cout << "f : " << f << std::endl; // 12.0
+  std::cout << "g : " << g << std::endl;
 
   return 0;
 }
